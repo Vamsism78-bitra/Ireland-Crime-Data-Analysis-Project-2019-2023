@@ -1,0 +1,109 @@
+
+Dataflow JSON:
+
+{
+    "name": "dataflow21",
+    "properties": {
+        "type": "MappingDataFlow",
+        "typeProperties": {
+            "sources": [
+                {
+                    "dataset": {
+                        "referenceName": "now_spa1111",
+                        "type": "DatasetReference"
+                    },
+                    "name": "source1"
+                },
+                {
+                    "dataset": {
+                        "referenceName": "now_crime1",
+                        "type": "DatasetReference"
+                    },
+                    "name": "source2"
+                }
+            ],
+            "sinks": [
+                {
+                    "dataset": {
+                        "referenceName": "vamsi_sink_csv",
+                        "type": "DatasetReference"
+                    },
+                    "name": "sink1"
+                }
+            ],
+            "transformations": [
+                {
+                    "name": "join1"
+                },
+                {
+                    "name": "derivedColumn1"
+                },
+                {
+                    "name": "derivedColumn2"
+                },
+                {
+                    "name": "select1"
+                }
+            ],
+            "scriptLines": [
+                "source(output(",
+                "          station_name as string,",
+                "          county as string,",
+                "          latitude as double,",
+                "          longitude as double",
+                "     ),",
+                "     allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     ignoreNoFilesFound: false) ~> source1",
+                "source(output(",
+                "          id_no as integer,",
+                "          year as integer,",
+                "          c02480v03003 as integer,",
+                "          type_of_offence as string,",
+                "          value as string,",
+                "          city as string,",
+                "          county as string,",
+                "          quarter as integer",
+                "     ),",
+                "     allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     ignoreNoFilesFound: false) ~> source2",
+                "derivedColumn1, derivedColumn2 join(derivedColumn1@county == derivedColumn2@county",
+                "     && station_name == city,",
+                "     joinType:'inner',",
+                "     matchType:'exact',",
+                "     ignoreSpaces: false,",
+                "     broadcast: 'auto')~> join1",
+                "source1 derive(county = upper(county),",
+                "          station_name = upper(station_name)) ~> derivedColumn1",
+                "source2 derive(county = upper(county),",
+                "          city = upper(city)) ~> derivedColumn2",
+                "join1 select(mapColumn(",
+                "          station_name,",
+                "          county = derivedColumn1@county,",
+                "          latitude,",
+                "          longitude,",
+                "          id_no,",
+                "          year,",
+                "          c02480v03003,",
+                "          type_of_offence,",
+                "          value,",
+                "          city,",
+                "          county = derivedColumn2@county,",
+                "          quarter",
+                "     ),",
+                "     skipDuplicateMapInputs: true,",
+                "     skipDuplicateMapOutputs: true) ~> select1",
+                "select1 sink(allowSchemaDrift: true,",
+                "     validateSchema: false,",
+                "     partitionFileNames:['vamsi_output.csv'],",
+                "     umask: 0022,",
+                "     preCommands: [],",
+                "     postCommands: [],",
+                "     skipDuplicateMapInputs: true,",
+                "     skipDuplicateMapOutputs: true,",
+                "     partitionBy('hash', 1)) ~> sink1"
+            ]
+        }
+    }
+}
