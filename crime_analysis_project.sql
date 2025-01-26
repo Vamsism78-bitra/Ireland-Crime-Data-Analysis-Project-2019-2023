@@ -5,11 +5,6 @@ FROM crime_data123
 GROUP BY year 
 ORDER BY year;
 
-select * from crime_data123
-
-SHOW ssl;
-SHOW ssl_cert_file;
-SHOW ssl_key_file;
 
 
 
