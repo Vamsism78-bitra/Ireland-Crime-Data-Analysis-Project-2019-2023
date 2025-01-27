@@ -1,7 +1,7 @@
 # Crime Data Analysis Project
 
 ## Project Overview
-This project analyzes crime trends in Ireland using two datasets: `source1` :`crime_data_set1` and `source 2` : `crime_data_set2`. The data has been processed, cleaned, and joined using Azure Data Factory, resulting in a consolidated dataset named `sink` : `today.csv`. The analysis aims to provide actionable insights into crime patterns, distribution, and hotspots across Ireland.
+This project analyzes crime trends in Ireland using two datasets `crime_data_set1`(`source1`) and `crime_data_set2`(`source2`). The data has been processed, cleaned, and joined using Azure Data Factory, resulting in a consolidated dataset named `today.csv`(`sink`). The analysis aims to provide actionable insights into crime patterns, distribution, and hotspots across Ireland.
 
 ---
 
@@ -15,24 +15,27 @@ Analyzed yearly changes in crime rates across Ireland to identify patterns and t
 
 ### 2. Top 5 Offense Types in Ireland
 Determined the most common types of offenses committed in Ireland and their frequency.
-<img width="289" alt="Image" src="https://github.com/user-attachments/assets/1d20a9eb-7cbd-47b6-ae38-9979f2e7f0c4" />
+
+<img width="289" alt="Image" src="https://github.com/user-attachments/assets/1d20a9eb-7cbd-47b6-ae38-9979f2e7f0c4"/>
 
 
 ### 3. Crime Distribution across Counties
 Visualized the spread of crimes across different counties to highlight areas of concern.
-<img width="289" alt="Image" src="https://github.com/user-attachments/assets/5b0b2fa9-3339-4969-9755-d46f98f8ea9c" />
+
+<img width="289" alt="Image" src="https://github.com/user-attachments/assets/5b0b2fa9-3339-4969-9755-d46f98f8ea9c"/>
 
 
 ### 4. Nearest Crime Location Station from End User
 Mapped crime locations to the nearest police stations to provide location-based insights.
-<img width="289" alt="Image" src="https://github.com/user-attachments/assets/45615c42-ab72-4952-b753-0017ecd12d91" />
+
+<img width="289" alt="Image" src="https://github.com/user-attachments/assets/45615c42-ab72-4952-b753-0017ecd12d91"/>
 
 ### 5. Highest Crime Areas in Dublin
 Identified neighborhoods in Dublin with the highest crime rates.
 
-<img width="289" alt="Image" src="https://github.com/user-attachments/assets/3c8b2026-eb8c-49ce-bab3-2c37caff7140" />
+<img width="289" alt="Image" src="https://github.com/user-attachments/assets/3c8b2026-eb8c-49ce-bab3-2c37caff7140"/>
 
-<img width="227" alt="Image" src="https://github.com/user-attachments/assets/3e89c905-be71-47c9-af38-c66d4831aa9a" />
+<img width="227" alt="Image" src="https://github.com/user-attachments/assets/3e89c905-be71-47c9-af38-c66d4831aa9a"/>
 
 
 
@@ -61,7 +64,8 @@ Focused on the specific crime types and their occurrences in Maynooth.
    - **Data Processing**: Merging, cleaning, and pushing data using transformations (e.g., derived columns, joins).
    - **Sink**: Pushed processed data into PostgreSQL for further querying and storage.
    
-   ![ADF Architecture](https://github.com/user-attachments/assets/8c2c47dd-e342-4d8d-a49c-24c28f407014)
+   <img src="https://github.com/user-attachments/assets/8c2c47dd-e342-4d8d-a49c-24c28f407014" alt="ADF Architecture" width="600">
+
 
 ### 2. **Azure Databricks**
    - Used for advanced data cleaning, filtering, and transformations before visualizations.
@@ -76,7 +80,7 @@ Focused on the specific crime types and their occurrences in Maynooth.
    - Created interactive dashboards and data visualizations for deeper insights into crime patterns.
    - [Power BI Report Click](https://app.powerbi.com/view?r=eyJrIjoiNjQzYmNhNmItYWYyNy00YjBlLWE4NjUtMzYzMTA1NzY4ZjM4IiwidCI6ImViNjExMmQ1LTcyMmQtNDg1Ny1iODM0LTI2NDc2NmM4MTY0MyIsImMiOjh9)
 
-<img width="746" alt="Image" src="https://github.com/user-attachments/assets/98077133-c85f-4920-bc82-a83c855f2aad" />
+<img width="700" alt="Image" src="https://github.com/user-attachments/assets/98077133-c85f-4920-bc82-a83c855f2aad"/>
 
 
 
