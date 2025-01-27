@@ -8,30 +8,30 @@ This project analyzes crime trends in Ireland using two datasets `crime_data_set
 
 ## Goals and Implemented Logics
 ### 1. Yearly Crime Trends in Ireland
-Analyzed yearly changes in crime rates across Ireland to identify patterns and trends over time.
+Analyzed yearly changes in crime rates across Ireland.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/39b4614a-f44b-4166-86f7-1ad3e9aea8d1"/>
 
 
-### 2. Top 5 Offense Types in Ireland
-Determined the most common types of offenses committed in Ireland and their frequency.
+### 2. Top Offense Types in Ireland
+Most common types of offenses committed in Ireland and their frequency.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/1d20a9eb-7cbd-47b6-ae38-9979f2e7f0c4"/>
 
 
 ### 3. Crime Distribution across Counties
-Visualized the spread of crimes across different counties to highlight areas of concern.
+Crimes across different counties to highlight areas of concern.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/5b0b2fa9-3339-4969-9755-d46f98f8ea9c"/>
 
 
 ### 4. Nearest Crime Location Station from End User
-Mapped crime locations to the nearest police stations to provide location-based insights.
+Mapped crime locations to the nearest Garda police stations to provide location-based insights.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/45615c42-ab72-4952-b753-0017ecd12d91"/>
 
 ### 5. Highest Crime Areas in Dublin
-Identified neighborhoods in Dublin with the highest crime rates.
+=Dublin with the highest crime rates.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/3c8b2026-eb8c-49ce-bab3-2c37caff7140"/>
 
@@ -41,18 +41,18 @@ Identified neighborhoods in Dublin with the highest crime rates.
 
 ### 7. Most Common Crime in Ireland
 
-Found the single most frequently occurring crime type across Ireland.
+Most frequently occurring crime type across Ireland.
 
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/82f22e6e-7463-4564-bfb6-b985702b5e29"/>
 
 ### 8. Top 10 Counties for Theft and Related Offenses in Ireland
-Ranked the top counties for theft and related offenses, providing insights into regional trends.
+Ranked the top counties for theft and related offenses regional trends.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/8480e7e6-e200-4e6f-962f-13e6a53d7ebe"/>
 
 ### 9. Crime Offenses in Maynooth
-Focused on the specific crime types and their occurrences in Maynooth.
+specific crime types and their occurrences in Maynooth.
 
 <img width="289" alt="Image" src="https://github.com/user-attachments/assets/17387212-f73f-46df-b165-57adf1de28de"/>
 
